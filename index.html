@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./frame-box/frame-box.css">
+    <link rel="stylesheet" href="./line-number/line-number.css">
+    <link rel="stylesheet" href="./launchpad/launchpad.css">
+    <title>ULED : Unipad LED Editor</title>
+    <script type="text/javascript">
+        document.oncontextmenu = function(){return false;}
+    </script>
+</head>
+<body>
+    <div class="flex-center">
+        <div>
+            <p class="editor-title bold">전체 LED 코드</p>
+            <div id="whole-led-code" class="custom-scrollbar">
+                <div class="editor">
+                    <div id="line" class="line-numbers">
+                        <span></span>
+                    </div>
+                    <textarea id="whole-led"></textarea>
+                </div>
+            </div>
+            <div class="dividing-line"></div>
+            <p class="editor-title bold">현재 프레임 LED 코드</p>
+            <div id="frame-led-code" class="custom-scrollbar">
+                <div class="editor">
+                    <div id="line" class="line-numbers">
+                      <span></span>
+                    </div>
+                    <textarea></textarea>
+                </div>
+            </div>
+        </div>
+        <div>
+            <ul id="frame-list" class="custom-scrollbar" style="list-style: none;">
+                <li class="item selected">Frame 1</li>
+            </ul>
+            <div id="frame-control-box">
+                <button id="add-button">Add</button>
+                <button id="remove-button">Remove</button>
+                <button id="insert-button">Insert</button>
+                <button id="play-button">Play LED</button>
+            </div>
+        </div>
+        <div>
+            <div id="virtual-launchpad" class="pro-mk3">
+                <div id="line-0" class="flex-center">
+                    <div class="empty empty-for-minisize"></div>
+                    <div id="chain-25" class="chain"></div>
+                    <div id="chain-26" class="chain"></div>
+                    <div id="chain-27" class="chain"></div>
+                    <div id="chain-28" class="chain"></div>
+                    <div id="chain-29" class="chain"></div>
+                    <div id="chain-30" class="chain"></div>
+                    <div id="chain-31" class="chain"></div>
+                    <div id="chain-32" class="chain"></div>
+                    <div class="logo empty-for-mk2"><img src="./launchpad/Novation.png" height="100%"></div>
+                </div>
+                <div id="line-1" class="flex-center">
+                    <div id="chain-24" class="chain empty-for-minisize"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div id="chain-1" class="chain"></div>
+                </div>
+                <div id="line-2" class="flex-center">
+                    <div id="chain-23" class="chain empty-for-minisize"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div id="chain-22" class="chain"></div>
+                </div>
+                <div id="line-3" class="flex-center">
+                    <div id="chain-22" class="chain empty-for-minisize"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div id="chain-3" class="chain"></div>
+                </div>
+                <div id="line-4" class="flex-center">
+                    <div id="chain-21" class="chain empty-for-minisize"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button center1"></div>
+                    <div class="button center2"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div id="chain-4" class="chain"></div>
+                </div>
+                <div id="line-5" class="flex-center">
+                    <div id="chain-20" class="chain empty-for-minisize"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button center3"></div>
+                    <div class="button center4"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div id="chain-5" class="chain"></div>
+                </div>
+                <div id="line-6" class="flex-center">
+                    <div id="chain-19" class="chain empty-for-minisize"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div id="chain-6" class="chain"></div>
+                </div>
+                <div id="line-7" class="flex-center">
+                    <div id="chain-18" class="chain empty-for-minisize"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div id="chain-7" class="chain"></div>
+                </div>
+                <div id="line-8" class="flex-center">
+                    <div id="chain-17" class="chain empty-for-minisize"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div class="button"></div>
+                    <div id="chain-8" class="chain"></div>
+                </div>
+                <div id="line-9" class="flex-center">
+                    <div class="empty empty-for-minisize"></div>
+                    <div id="chain-16" class="chain empty-for-minisize"></div>
+                    <div id="chain-15" class="chain empty-for-minisize"></div>
+                    <div id="chain-14" class="chain empty-for-minisize"></div>
+                    <div id="chain-13" class="chain empty-for-minisize"></div>
+                    <div id="chain-12" class="chain empty-for-minisize"></div>
+                    <div id="chain-11" class="chain empty-for-minisize"></div>
+                    <div id="chain-10" class="chain empty-for-minisize"></div>
+                    <div id="chain-9" class="chain empty-for-minisize"></div>
+                    <div class="empty empty-for-minisize"></div>
+                </div>
+            </div>
+            <select id="launchpad-type-select">
+                <option value="pro-mk3">Launchpad Pro MK3</option>
+                <option value="mk3">Launchpad X</option>
+                <option value="pro-mk2">Launchpad Pro</option>
+                <option value="mk2">Launchpad MK2</option>
+            </select>
+        </div>
+    </div>
+</body>
+<script type="module" src="./script.js"></script>
+<script type="module" src="./line-number/line-number.js"></script>
+</html>

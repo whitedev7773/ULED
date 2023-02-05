@@ -1,0 +1,189 @@
+/* 선택 메뉴 디자인 */
+select {
+    font-size: 15px;
+    text-align: center;
+    width: 300px;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 30%;
+    box-shadow: 0px 0px 20px #00000023;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+@keyframes FadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+/* 기본 베이스 */
+.empty { background-color: transparent !important; }
+
+.pro-mk2 > div > .empty-for-mk2, .mk2 > div > .empty-for-mk2 {
+    animation: FadeOut 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+.pro-mk3 > div > .empty-for-mk2, .mk3 > div > .empty-for-mk2 {
+    animation: FadeIn 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+
+#virtual-launchpad {
+    transition: border 0.5s ease-out, border-radius 0.5s ease-out;
+    padding: 30px;
+    margin-left: 30px;
+    background: #0e1824;
+    box-shadow: 0px 0px 20px #00000057;
+}
+
+#virtual-launchpad > div > div {
+    transition: width 0.5s ease-out, height 0.5s ease-out, margin 0.5s ease-out, border-radius 0.5s ease-out;
+    width: 50px;
+    height: 50px;
+}
+
+#virtual-launchpad > div > div {
+    background-color: #d9e0e6;
+}
+
+#virtual-launchpad > div > .chain::before, #virtual-launchpad > div > .chain::before {
+    transition: all 0.5s ease-out;
+}
+
+.button.dot::before {
+    content: " ";
+    position: absolute;
+    margin: 23px;
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #00000020;
+}
+
+
+
+/* 미니 사이즈 패드용 */
+.mk2 > div > .empty-for-minisize, .mk3 > div > .empty-for-minisize {
+    margin: 0px;
+    width: 0px !important;
+    height: 0px !important;
+}
+
+.mk2 > div > .empty-for-minisize::before, .mk3 > div > .empty-for-minisize::before {
+    margin: 0px;
+    width: 0px !important;
+    height: 0px !important;
+}
+
+
+
+/* 2세대 패드용 */
+#virtual-launchpad.mk2, #virtual-launchpad.pro-mk2 {
+    /* 본체 모서리 곡률 */
+    border-radius: 20px;
+    border: 2px solid #e67e22;
+}
+
+.pro-mk2 > div > div, .mk2 > div > div {
+    /* 일반 버튼 디자인 */
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.pro-mk2 > div > .chain, .mk2 > div > .chain {
+    /* 체인 버튼 디자인 */
+    border-radius: 100%;
+}
+
+.pro-mk2 > div > .chain::before, .mk2 > div > .chain::before {
+    /* 체인 버튼 디자인 */
+    content: " ";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    margin: 3px;
+    background-color: #0e1824;
+    border-radius: 100%;
+}
+
+.pro-mk2 > div > .button.center1, .mk2 > div > .button.center1 {
+    /* 중앙 버튼 디자인 */
+    border-radius: 2px 2px 20px 2px;
+}
+
+.pro-mk2 > div > .button.center2, .mk2 > div > .button.center2 {
+    /* 중앙 버튼 디자인 */
+    border-radius: 2px 2px 2px 20px;
+}
+
+.pro-mk2 > div > .button.center3, .mk2 > div > .button.center3 {
+    /* 중앙 버튼 디자인 */
+    border-radius: 2px 20px 2px 2px;
+}
+
+.pro-mk2 > div > .button.center4, .mk2 > div > .button.center4 {
+    /* 중앙 버튼 디자인 */
+    border-radius: 20px 2px 2px 2px;
+}
+
+
+
+/* 3세대 패드용 */
+#virtual-launchpad.mk3, #virtual-launchpad.pro-mk3 {
+    /* 본체 모서리 곡률 */
+    border-radius: 6px;
+    border: 0px solid #e67e22;
+}
+
+.pro-mk3 > div > div, .mk3 > div > div {
+    /* 일반 버튼 디자인 */
+    margin: 4px;
+    border-radius: 2px;
+}
+
+.pro-mk3 > div > .chain::before, .mk3 > div > .chain::before {
+    /* 체인 버튼 디자인 */
+    content: " ";
+    position: absolute;
+    width: 44px;
+    height: 44px;
+    margin: 3px;
+    background-color: #0e1824;
+}
+
+.pro-mk3 > div > .button.center1, .mk3 > div > .button.center1 {
+    /* 중앙 버튼 디자인 */
+    border-radius: 2px 2px 12px 2px;
+}
+
+.pro-mk3 > div > .button.center2, .mk3 > div > .button.center2 {
+    /* 중앙 버튼 디자인 */
+    border-radius: 2px 2px 2px 12px;
+}
+
+.pro-mk3 > div > .button.center3, .mk3 > div > .button.center3 {
+    /* 중앙 버튼 디자인 */
+    border-radius: 2px 12px 2px 2px;
+}
+
+.pro-mk3 > div > .button.center4, .mk3 > div > .button.center4 {
+    /* 중앙 버튼 디자인 */
+    border-radius: 12px 2px 2px 2px;
+}

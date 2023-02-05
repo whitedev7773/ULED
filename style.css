@@ -1,0 +1,39 @@
+.extra-bold { font-weight: 800 }
+.bold		{ font-weight: 700 }
+.normal		{ font-weight: 400 }
+.light		{ font-weight: 300 }
+
+body {
+    padding: 30px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* 스크롤바 스타일 */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 25px;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0;
+    background-clip : padding-box;
+    border: 10px solid transparent;
+    height: 30px;
+    border-radius: 15px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.dividing-line {
+    width: 170px;
+    height: 1px;
+    margin-left: 14px;
+}

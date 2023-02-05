@@ -1,0 +1,87 @@
+#frame-control-box {
+    width: 252px;
+    height: 60px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #00000031;
+}
+
+#frame-control-box > button {
+    transition: background-color 0.2s ease-out;
+    width: 70px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 10px;
+    border: none;
+}
+
+#frame-control-box > #play-button {
+    height: 30px;
+}
+
+#frame-control-box > button:hover {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+#frame-list {
+    width: 230px;
+    height: 300px;
+    overflow-y: scroll;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px #00000031;
+}
+
+/* 아이템 기본 스타일 */
+.item {
+    transition: background-color 0.1s ease-out;
+    display: flex;
+    margin: 5px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 7px;
+    animation: item_summon 0.2s ease-out;
+    cursor: pointer;
+}
+
+/* 아이템 생성 애니메이션 */
+@keyframes item_summon {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/* 아이템 셀렉트 before 효과 */
+.item::before {
+    transition: height 0.2s ease-out;
+    content: "";
+    transform: translateX(-22px);
+    width: 6px;
+    height: 0px;
+    border-radius: 5px;
+}
+
+.item:hover {
+    background-color: #dedede;
+}
+
+.item:hover::before {
+    height: 21px;
+    background-color: #6b6b6b;
+}
+
+.item.selected {
+    background-color: #efefef;
+}
+
+.item.selected::before {
+    height: 21px;
+    background-color: #74b9ff;
+}

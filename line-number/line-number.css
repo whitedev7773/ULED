@@ -1,0 +1,61 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+
+.editor-title {
+    font-family: 'NanumSquare', sans-serif;
+    margin-left: 20px;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+    background-color: #349aff;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.editor {
+    display: inline-flex;
+    gap: 10px;
+    font-family: monospace;
+    line-height: 21px;
+    border-radius: 2px;
+}
+
+.line-numbers {
+    margin-top: -2px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: right;
+    background-color: #e0e0e0;
+}
+
+.line-numbers span {
+    counter-increment: linenumber;
+}
+
+.line-numbers span::before {
+    content: counter(linenumber);
+    display: block;
+    color: #506882;
+}
+
+textarea {
+    width: 100%;
+    line-height: 21px;
+    overflow-y: hidden;
+    padding: 0;
+    border: 0;
+    outline: none;
+    resize: none;
+}
+
+#whole-led-code, #frame-led-code {
+    width: 240px;
+    max-height: 300px;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+    margin-right: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px #00000031;
+    resize: none;
+}
