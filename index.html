@@ -9,14 +9,12 @@
     <link rel="stylesheet" href="./line-number/line-number.css">
     <link rel="stylesheet" href="./launchpad/launchpad.css">
     <title>ULED : Unipad LED Editor</title>
-    <script type="text/javascript">
-        document.oncontextmenu = function(){return false;}
-    </script>
 </head>
-<body>
-    <div class="flex-center">
+<body data-theme="light-theme" topmargin="0" bottommargin="0" leftmargin="0" rightmargin="0">
+    <!-- 섹션 1 -->
+    <div id="section" class="flex-center">
         <div>
-            <p class="editor-title bold">전체 LED 코드</p>
+            <p class="tag-style-title">전체 LED 코드</p>
             <div id="whole-led-code" class="custom-scrollbar">
                 <div class="editor">
                     <div id="line" class="line-numbers">
@@ -26,7 +24,7 @@
                 </div>
             </div>
             <div class="dividing-line"></div>
-            <p class="editor-title bold">현재 프레임 LED 코드</p>
+            <p class="tag-style-title">현재 프레임 LED 코드</p>
             <div id="frame-led-code" class="custom-scrollbar">
                 <div class="editor">
                     <div id="line" class="line-numbers">
@@ -59,7 +57,7 @@
                     <div id="chain-30" class="chain"></div>
                     <div id="chain-31" class="chain"></div>
                     <div id="chain-32" class="chain"></div>
-                    <div class="logo empty-for-mk2"><img src="./launchpad/Novation.png" height="100%"></div>
+                    <div id="logo" class="logo empty-for-mk2"><img src="./launchpad/Novation.png" height="100%"></div>
                 </div>
                 <div id="line-1" class="flex-center">
                     <div id="chain-24" class="chain empty-for-minisize"></div>
@@ -83,7 +81,7 @@
                     <div class="button"></div>
                     <div class="button"></div>
                     <div class="button"></div>
-                    <div id="chain-22" class="chain"></div>
+                    <div id="chain-2" class="chain"></div>
                 </div>
                 <div id="line-3" class="flex-center">
                     <div id="chain-22" class="chain empty-for-minisize"></div>
@@ -170,12 +168,40 @@
                     <div class="empty empty-for-minisize"></div>
                 </div>
             </div>
+            
+        </div>
+    </div>
+    <!-- 섹션 2 -->
+    <div id="section" class="flex-center">
+        <div class="container fixed-container">
+            <p class="tag-style-title">Color 팔레트</p>
+        </div>
+        <div class="container fixed-container">
+            <p class="tag-style-title">Color 팔레트</p>
+        </div>
+    </div>
+    <!-- 섹션 3 -->
+    <div id="section" class="flex-center">
+        <div class="container fixed-container flex-center">
+            <p class="tag-style-title">가상 런치패드 디자인 선택</p>
             <select id="launchpad-type-select">
                 <option value="pro-mk3">Launchpad Pro MK3</option>
                 <option value="mk3">Launchpad X</option>
                 <option value="pro-mk2">Launchpad Pro</option>
                 <option value="mk2">Launchpad MK2</option>
             </select>
+        </div>
+        <div class="container fixed-container flex-center">
+            <p class="tag-style-title">MIDI Out 선택</p>
+            <select id="midi-out-select">
+                <option>None</option>
+            </select>
+        </div>
+    </div>
+    <div id="section" class="flex-center">
+        <div id="midi-io-log" class="container">
+            <p class="tag-style-title">MIDI Input 로그</p>
+            <textarea class="no-resize" style="width:97%" placeholder="Read Only" readonly></textarea>
         </div>
     </div>
 </body>
