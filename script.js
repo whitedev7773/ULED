@@ -26,9 +26,14 @@ document.querySelector("#insert-button").addEventListener("click", (e) => {
 document.querySelector("#play-button").addEventListener("click", async (e) => {
     await launchpad.Play();
 });
+/*****************************************************/
 
 
 // 가상 런치패드 타입 변경 메뉴 이벤트 리스너
 document.querySelector("#launchpad-type-select").addEventListener("change", (e) => {
     launchpad.ChangeTypeTo(e.target.value);
 });
+
+document.oncontextmenu = () => {
+    return false;
+}
