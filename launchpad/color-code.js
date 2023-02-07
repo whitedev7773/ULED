@@ -26,7 +26,7 @@ export default class Color {
      * @param {String} number
      * @returns 
      */
-    Code(number) {
+    GetColorByCode(number) {
         return this.list[number];
     }
 
