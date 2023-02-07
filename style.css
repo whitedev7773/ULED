@@ -1,15 +1,96 @@
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+@import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
+
 .extra-bold { font-weight: 800 }
 .bold		{ font-weight: 700 }
 .normal		{ font-weight: 400 }
 .light		{ font-weight: 300 }
 
-body {
-    padding: 30px;
+/* 다크 모드 */
+[data-theme="dark-theme"] {
+    background-color: #161616;
+}
+
+[data-theme="dark-theme"] select {
+    color: rgb(197, 197, 197);
+    background-color: #444444;
+}
+
+[data-theme="dark-theme"] .container {
+    background-color: #2e2e2e;
+}
+
+[data-theme="dark-theme"] textarea {
+    color: #adadad;
+    background-color: #3d3d3d;
+}
+
+
+/* 라이트 모드 */
+[data-theme="light-theme"] {
+    background-color: white;
+}
+
+[data-theme="light-theme"] select {
+    color: black;
+    background-color: #ffffff;
+}
+
+[data-theme="light-theme"] .container {
+    background-color: #ffffff;
+}
+
+.tag-style-title {
+    font-family: 'NanumSquare', sans-serif;
+    margin: 10px;
+    padding: 10px;
+    width: 180px;
+    text-align: center;
+    background-color: #349aff;
+    color: #fff;
+    border-radius: 20px;
+}
+
+select {
+    font-size: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 20px #00000023;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+#launchpad-type-select, #midi-out-select {
+    width: 340px;
+    height: 40px;
+    margin-top: 9px;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+
+#section {
+    margin: 40px;
+}
+
+.flex-left {
+    display: flex;
+    justify-content: left;
 }
 
 .flex-center {
     display: flex;
     justify-content: center;
+}
+
+.flex-right {
+    display: flex;
+    justify-content: right;
+}
+
+.fixed-container {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 600px;
 }
 
 /* 스크롤바 스타일 */
@@ -32,8 +113,21 @@ body {
     border-radius: 5px;
 }
 
-.dividing-line {
-    width: 170px;
-    height: 1px;
-    margin-left: 14px;
+.container {
+    border-radius: 20px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px #00000031;
+}
+
+#midi-io-log {
+    width: 1200px;
+    margin: 30px;
+}
+
+#midi-io-log > textarea {
+    height: 200px;
+}
+
+.no-resize { 
+    resize: none;
 }
