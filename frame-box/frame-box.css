@@ -1,6 +1,76 @@
+/* 다크 모드 */
+[data-theme="dark-theme"] #frame-control-box, [data-theme="dark-theme"] #frame-list{
+    background-color: #2e2e2e;
+}
+
+[data-theme="dark-theme"] #frame-control-box > button {
+    color: white;
+    background-color: #444444;
+}
+
+[data-theme="dark-theme"] #frame-control-box > button:hover {
+    background-color: #585858;
+}
+
+[data-theme="dark-theme"] .item {
+    color: #949494;
+}
+
+[data-theme="dark-theme"] .item:hover {
+    background-color: #3a3a3a;
+}
+
+[data-theme="dark-theme"] .item:hover:before {
+    height: 21px;
+    background-color: #6b6b6b;
+}
+
+[data-theme="dark-theme"] .item.selected {
+    color: white;
+    background-color: #555555;
+}
+
+[data-theme="dark-theme"] .item.selected::before {
+    height: 21px;
+    background-color: #74b9ff;
+}
+
+/* 라이트 모드 */
+[data-theme="light-theme"] #frame-control-box, [data-theme="light-theme"] #frame-list{
+    background-color: white;
+}
+
+[data-theme="light-theme"] #frame-control-box > button:hover {
+    background-color: #e0e0e0;
+}
+
+[data-theme="light-theme"] .item {
+    color: rgb(139, 139, 139);
+}
+
+[data-theme="light-theme"] .item:hover {
+    background-color: #dedede;
+    color: black;
+}
+
+[data-theme="light-theme"] .item:hover::before {
+    height: 21px;
+    background-color: #6b6b6b;
+}
+
+[data-theme="light-theme"] .item.selected {
+    color: black;
+    background-color: #efefef;
+}
+
+[data-theme="light-theme"] .item.selected::before {
+    height: 21px;
+    background-color: #74b9ff;
+}
+
 #frame-control-box {
     width: 252px;
-    height: 60px;
+    height: 140px;
     text-align: center;
     padding: 10px;
     border-radius: 20px;
@@ -17,17 +87,18 @@
 }
 
 #frame-control-box > #play-button {
-    height: 30px;
+    width: 238px;
+    height: 70px;
+    font-size: 15px;
 }
 
 #frame-control-box > button:hover {
-    background-color: #e0e0e0;
     cursor: pointer;
 }
 
 #frame-list {
     width: 230px;
-    height: 300px;
+    height: 400px;
     overflow-y: scroll;
     padding: 20px;
     border-radius: 20px;
@@ -66,22 +137,4 @@
     width: 6px;
     height: 0px;
     border-radius: 5px;
-}
-
-.item:hover {
-    background-color: #dedede;
-}
-
-.item:hover::before {
-    height: 21px;
-    background-color: #6b6b6b;
-}
-
-.item.selected {
-    background-color: #efefef;
-}
-
-.item.selected::before {
-    height: 21px;
-    background-color: #74b9ff;
 }
