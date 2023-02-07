@@ -1,6 +1,33 @@
 @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 @import url(https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css);
 
+/* 다크 모드 */
+[data-theme="dark-theme"] #whole-led-code, [data-theme="dark-theme"] #frame-led-code, [data-theme="dark-theme"] .editor > textarea {
+    color: #adadad;
+    background-color: #2e2e2e;
+}
+
+[data-theme="dark-theme"] .line-numbers {
+    background-color: #575757;
+}
+
+[data-theme="dark-theme"] .line-numbers span::before {
+    color: white;
+}
+
+/* 라이트 모드 */
+[data-theme="light-theme"] #whole-led-code, [data-theme="light-theme"] #frame-led-code {
+    background-color: white;
+}
+
+[data-theme="light-theme"] .line-numbers {
+    background-color: #e0e0e0;
+}
+
+[data-theme="light-theme"] .line-numbers span::before {
+    color: #506882;
+}
+
 .editor-title {
     font-family: 'NanumSquare', sans-serif;
     margin-left: 20px;
@@ -26,7 +53,6 @@
     padding-left: 5px;
     padding-right: 5px;
     text-align: right;
-    background-color: #e0e0e0;
 }
 
 .line-numbers span {
@@ -36,10 +62,9 @@
 .line-numbers span::before {
     content: counter(linenumber);
     display: block;
-    color: #506882;
 }
 
-textarea {
+.editor > textarea {
     width: 100%;
     line-height: 21px;
     overflow-y: hidden;
@@ -51,7 +76,7 @@ textarea {
 
 #whole-led-code, #frame-led-code {
     width: 240px;
-    max-height: 300px;
+    max-height: 242px;
     overflow-y: scroll;
     margin-bottom: 20px;
     margin-right: 30px;
